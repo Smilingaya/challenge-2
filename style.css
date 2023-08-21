@@ -1,47 +1,186 @@
-body {
-  overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Karla:wght@400;700&family=Lexend+Deca&display=swap');
+:root{
+    /*color*/
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+    /*font*/
+     --Font-size: 32px;
+     --font-family: 'Inter', sans-serif;
+     --font-weight-light:300;
+     --font-weight-medium:500;
+     --font-weight-bold:700;
+
 }
-.container {
-  position: relative;
-  /* overflow: hidden; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
 }
-.image {
-  position: absolute;
-  left: 700px;
-  top: 50px;
+.cont1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;  
+      height: 450px;
+      display: grid;
+      grid-template-columns: 50% 50%;
 }
-.content {
-  color: hsl(240, 38%, 20%);
-  position: absolute;
-  left: 130px;
-  top: 100px;
-  font-family: Inter;
-  font-size: 32px;
-  width: 680px;
+.slide1{
+  background-image: url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position:top  center;
+  
 }
-.engineer {
-  color: hsl(240, 18%, 77%);
+.slide1 p{
+    color: var(--Dark-Blue);
+    font-size: 30px;
+    font-weight: var(--font-weight-light);
+    width: 58%;
+    position: absolute;
+    top: 20%;
 }
-/* .text { */
-/* color: hsl(240, 38%, 20%); */
-/* } */
-.svg-1 {
-  position: absolute;
-  left: 220px;
-  top: 62px;
+.footer {
+    display: flex;
+ gap: 30%;
+ 
 }
-.svg-2 {
-  position: absolute;
-  top: 450px;
-  left: -8px;
-  /* height: 100px; */
-  /* bottom: 0px; */
+.name p{
+    font-weight: var(--font-weight-bold);
+    font-size: 18px;
+    color: var(--Dark-Blue);
+    margin-top: 20%;
+    
 }
-.svg-3 {
-  /* position: absolute; */
-  /* left: 00px; */
-  padding-left: 500px;
+.job p{
+    font-weight: var(--font-weight-light);
+     color: var(--Grayish-Blue);
+     font-size: 18px;
+     margin-top: 20%;
 }
-.navigation {
-  background-color: aqua;
+footer img{
+    position: absolute;
+    bottom: 0;
+}
+.slide2{
+    background-image:  url("./images/pattern-bg.svg") ;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    margin:  0 auto;
+    height: 100%;
+    padding: 40px;
+   
+}
+.button img{
+    position: relative;
+}
+.button{
+   
+    width: 70px;
+    height: 35px;
+    border-radius: 2rem;
+  background-color: white;  
+    display: flex;   
+    position: absolute;
+    bottom: -32px;
+  background-color: white;
+  right: 35%;
+    
+     
+}
+.previo{
+    width: 35px;
+    height: 35px;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border: none;
+}
+.previo:hover{
+    background-color:rgb(163, 159, 159);
+}
+
+.next{
+    width: 35px;
+    height: 35px;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border: none;
+}
+.next:hover{
+    background-color:rgb(163, 159, 159);
+}
+.cont2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;  
+      height: 450px;
+     display: grid;
+     grid-template-columns: 50% 50%;
+      display: none;
+}
+
+
+@media  screen and (max-width:600px){
+  main{
+   height: 80%;
+  }
+  .cont1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  .slide1{
+    background-position: center 60%;
+    background-size: 100px;
+  }
+  .slide2{ 
+   
+    background-position:80% 30px;
+    width: 200%;
+    
+     background-size: 300px;
+    height: 100%;
+    padding: 40px;
+    margin-top: -90%;
+    margin-left: -100%;
+  }
+  .tanya ,.john{
+    width: 250px;
+    height: 250px;
+  }
+  .button{
+    top: 33%;
+  }
+  footer img{
+    width: 80%;
+    position: fixed;
+  }
+  .slide1 p{
+    margin-top: 55%;
+    text-align: center;
+    place-items: center;
+    margin-left: -9%;
+    width: 340px;
+    font-size: 20px;
+     
+  }
+  .name p{
+    margin-top: 118%;
+  }
+  .job p{
+    margin-top: 130%;
+    margin-left: -20%;
+  }
+  .cont2{
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+ 
 }
